@@ -1,8 +1,9 @@
 'use client';
-import { FaSearch } from "react-icons/fa";
+// import { FaSearch } from "react-icons/fa";
 import { useState } from 'react';
 import { Product } from '@/types';
 import Image from 'next/image';
+
 
 type CartItem = {
     product: Product;
@@ -76,9 +77,9 @@ const addToCart = (product: Product) => {
           onChange={(e) => setSearch(e.target.value)}
           className='bg-gray-900 border border-green-400 rounded-md px-2 py-1 min-w-[120px] sm:min-w-[350px]'
         />
-        <FaSearch 
+        {/* <FaSearch 
         className='cursor-pointer bg-green-400 px-2 py-2 rounded-lg h-8 w-8 mx-2 hover:bg-gray-900 hover:border-green-400 border border-green-400 hover:scale-105 transition-transform'
-        />
+        /> */}
         </div>
         {filteredProducts.map((product) => (
           <div key={product._id} className='border border-green-500 my-4 p-4 rounded-lg flex flex-col sm:flex-row justify-between items-center'>
