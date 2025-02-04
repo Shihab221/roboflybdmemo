@@ -1,5 +1,5 @@
 'use client';
-// import { FaSearch } from "react-icons/fa";
+
 import { useState } from 'react';
 import { Product } from '@/types';
 import Image from 'next/image';
