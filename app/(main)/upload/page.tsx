@@ -39,7 +39,7 @@ export default function Upload(){
     return(
       <div>
         <p>
-          You're not signed in
+          You are not signed in
         </p>
         <button onClick={()=>signIn()}>Signin</button>
       </div>

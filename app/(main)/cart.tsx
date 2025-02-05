@@ -5,10 +5,10 @@ import { Product } from '@/types';
 import Image from 'next/image';
 
 
-type CartItem = {
-    product: Product;
-    quantity: number;
-}
+// type CartItem = {
+//     product: Product;
+//     quantity: number;
+// }
 export default function Cart({ products }: { products: Product[] }) {
   const [cart, setCart] = useState<Product[]>([]);
   const [search, setSearch] = useState('');
