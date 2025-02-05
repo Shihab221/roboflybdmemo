@@ -13,7 +13,7 @@ export default function Upload(){
     image: '',
   });
 
-  const handleSubmit= async(e)=>{
+  const handleSubmit= async(e: React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
     const res = await fetch('/api/products',{
       method:'POST',

@@ -1,7 +1,7 @@
 import dbConnect from '@/lib/db';
 import Product from '@/models/Product';
 import Cart from './cart';
-import { Product as ProductType } from '@/types';
+import { Product as ProductType } from './types';
 
 
 
