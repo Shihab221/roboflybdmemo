@@ -10,7 +10,9 @@ import Image from 'next/image';
 //     quantity: number;
 // }
 export default function Cart({ products }: { products: Product[] }) {
-  const [cart, setCart] = useState<Product[]>([]);
+  // const [cart, setCart] = useState<Product[]>([]);
+  const [cart, setCart] = useState<{ product: Product; quantity: number }[]>([]);
+
   const [search, setSearch] = useState('');
   const [additional, setAdditional] = useState('');
 
