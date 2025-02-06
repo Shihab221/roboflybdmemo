@@ -6,14 +6,15 @@ if (!MONGODB_URI) {
   throw new Error("Please define the MONGODB_URI environment variable inside .env.local");
 }
 
-// Extend the global object to include mongoose cache
+// Extend the global object properly
 declare global {
-  var mongooseCache: { conn: mongoose.Mongoose | null; promise: Promise<mongoose.Mongoose> | null };
+  interface Global {
+    mongooseCache: { conn: mongoose.Mongoose | null; promise: Promise<mongoose.Mongoose> | null };
+  }
 }
 
-// Use cached connection in development to avoid multiple connections
-let cached = global.mongooseCache || { conn: null, promise: null };
-global.mongooseCache = cached;
+(global as any).mongooseCache = (global as any).mongooseCache || { conn: null, promise: null };
+const cached = (global as any).mongooseCache;
 
 async function dbConnect() {
   if (cached.conn) {
